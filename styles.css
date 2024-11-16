@@ -1,0 +1,45 @@
+styles.css
+
+        /* Style the search bar container */
+        .search-container {
+            max-width: 400px;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style the input field */
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        /* Style the search button */
+        .search-button {
+            padding: 10px;
+            background-color: #0030a6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+            font-size: 18px;
+        }
+
+        /* Basic styling for search results */
+        .results {
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* Space between result items */
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    

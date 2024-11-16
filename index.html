@@ -1,0 +1,46 @@
+searchbar.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="https://www.okanaganmotorsports.com/" content="Seach page"
+    <meta name="viewport" content="widjjth=device-width, initial-scale=1.0">
+    <title>OK Motorspors</title>
+    <link rel="stylesheet" href = "styles.css">
+</head>
+<body>
+
+<div class="search-container">
+    <!-- Search Input Field -->
+    <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    <!-- Search Button -->
+    <button class="search-button" onclick="performSearch()">Search</button>
+</div>
+
+<!-- Container for search results -->
+<div id="results" class="results"></div>
+
+<script>
+    function performSearch() {
+        // Get the search term from the input field
+        const query = document.getElementById("searchInput").value;
+
+        // Placeholder for actual search logic (fetching data from the server)
+        // For now, we'll simulate a response
+        const sampleData = ["dog", "cat", "frog", "lion", "fig", "grape"];
+        const results = sampleData.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+
+        // Display the results
+        const resultsContainer = document.getElementById("results");
+        resultsContainer.innerHTML = results.length
+            ? results.map(item => `<p>${item}</p>`).join('')
+            : `<p>No results found for "${query}"</p>`;
+    }
+    function handleEnter(event) {
+        if (event.key === "Enter") {
+            performSearch();
+        }
+</script>
+
+</body>
+</html>
